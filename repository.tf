@@ -13,7 +13,7 @@ resource "github_repository" "github-management" {
 }
 
 resource "github_branch_protection" "team_baseline_config" {
-  repository     = github_repository.github_management.name
+  repository     = github_repository.github-management.name
   branch         = "master"
 
   required_status_checks {
