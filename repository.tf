@@ -2,14 +2,15 @@ resource "github_repository" "github-management" {
   name        = "github-management"
   description = "Terraform based repository to manage all our GutHub repositories"
 
-  private            = true
-  has_issues         = true
-  has_wiki           = false
-  allow_merge_commit = false
-  allow_squash_merge = true
-  allow_rebase_merge = true
-  auto_init          = false
-  topics             = ["config", "terraform"]
+  private                = false
+  has_issues             = true
+  has_wiki               = false
+  allow_merge_commit     = false
+  allow_squash_merge     = true
+  allow_rebase_merge     = true
+  auto_init              = false
+  delete_branch_on_merge = true
+  topics                 = ["config", "terraform"]
 }
 
 resource "github_branch_protection" "team_baseline_config" {
